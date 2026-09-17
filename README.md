@@ -4,7 +4,7 @@
 
 # Auto Merge
 
-[![Release](https://img.shields.io/github/v/release/libnudget/auto-merge?logo=github&label=latest)](https://github.com/libnudget/auto-merge/releases)
+[![Release](https://img.shields.io/github/v/release/coccinella-labs/auto-merge?logo=github&label=latest)](https://github.com/coccinella-labs/auto-merge/releases)
 
 Enable or disable PR auto-merge.
 
@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'auto-merge')
     steps:
-      - uses: libnudget/auto-merge@v1
+      - uses: coccinella-labs/auto-merge@v1
         with:
           mode: enable
 
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'auto-merge-now')
     steps:
-      - uses: libnudget/auto-merge@v1
+      - uses: coccinella-labs/auto-merge@v1
         with:
           mode: now
 ```
